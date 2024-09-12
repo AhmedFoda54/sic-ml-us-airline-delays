@@ -1,6 +1,7 @@
 import pickle
 import streamlit as st
 import pandas as pd
+import xgboost
 
 # Page config
 st.set_page_config(
