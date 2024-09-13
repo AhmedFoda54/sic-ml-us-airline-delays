@@ -26,7 +26,7 @@ st.markdown(
 with open('models/xgb_class_model.pkl', 'rb') as model_clf:
     clf = pickle.load(model_clf)
 
-with open('models/bag_reg_model.pkl', 'rb') as model_dep:
+with open('models/lgbm_reg_model.pkl', 'rb') as model_dep:
     reg_dep = pickle.load(model_dep)
 #
 # with open('models/gb_arr_model.pkl', 'rb') as model_arr:
