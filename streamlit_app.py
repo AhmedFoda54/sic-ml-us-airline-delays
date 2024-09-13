@@ -83,8 +83,8 @@ def class_prediction(day_of_week, airline, dep_time, dep_type, arr_cityname,
         'Arr_Delay_Type': [arr_type],
         'Flight_Duration': [flight_dur],
         'Distance_type': [dist],
-        'Month':[month],
-        'Day':[day]
+        'Month': [month],
+        'Day': [day]
     })
 
     prediction = clf.predict(df_input)
@@ -101,7 +101,6 @@ def class_prediction(day_of_week, airline, dep_time, dep_type, arr_cityname,
 
 # Botton to predict
 if st.button('Predict'):
-    predict = class_prediction(day_of_week, airline, dep_time, dep_type, arr_cityname,
-               arr_airport, arr_type, flight_dur, dist, month,day)
+    predict = class_prediction(day_of_week, airline, dep_time, dep_type, arr_type, flight_dur, dist, month, day)
     st.write("For your flight {}".format(predict))
     st.success(predict)
