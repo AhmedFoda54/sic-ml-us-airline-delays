@@ -114,19 +114,19 @@ def class_prediction(day_of_week, airline, dep_label, dep_type, arr_type, arr_de
         'Day': [day],
         'Manufacturer': [manufacturer],
         'Model': [model],
-        'Delay_carrier': [del_carrier],
+        'Delay_Carrier': [del_carrier],
         'Delay_Weather': [del_weather],
-        'Del_nas': [del_nas],
-        'Del_sec': [del_sec],
-        'Del_aircraft': [del_aircraft],
-        'Prcp': [prcp],
-        'Wdspd': [wdspd],
-        'Wdir': [wdir],
-        'Snow': [snow],
-        'Age': [age],
-        'Avg_Temp': [avg_temp],
-        'pressure': [pressure],
-        'Arrival Delay': [arr_delay]
+        'Delay_NAS': [del_nas],
+        'Delay_Security': [del_sec],
+        'Delay_LastAircraft': [del_aircraft],
+        'prcp': [prcp],
+        'wspd': [wdspd],
+        'wdir': [wdir],
+        'snow': [snow],
+        'Aicraft_age': [age],
+        'tavg': [avg_temp],
+        'pres': [pressure],
+        'Arr_Delay': [arr_delay]
     })
 
     prediction = clf.predict(df_input)
@@ -140,8 +140,8 @@ def class_prediction(day_of_week, airline, dep_label, dep_type, arr_type, arr_de
 
 # Button to predict
 if st.button('Predict'):
-    predict = class_prediction(day_of_week, airline, dep_label, dep_type, arr_type, arr_delay, flight_dur, dist, month, day
-                     , manufacturer, model, del_carrier, del_weather, del_nas, del_sec, del_aircraft,
-                     prcp, pressure, wdspd, wdir, snow, age, avg_temp)
+    predict = class_prediction(day_of_week, airline, dep_label, dep_type, arr_type, arr_delay, flight_dur, dist, month,
+                               day, manufacturer, model, del_carrier, del_weather, del_nas, del_sec, del_aircraft,
+                               prcp, pressure, wdspd, wdir, snow, age, avg_temp)
     st.write("For your flight: {}".format(predict))
     st.success(predict)
