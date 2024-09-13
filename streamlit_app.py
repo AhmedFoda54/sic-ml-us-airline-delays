@@ -26,11 +26,11 @@ st.markdown(
 with open('models/xgb_class_model.pkl', 'rb') as model_clf:
     clf = pickle.load(model_clf)
 
-with open('models/gb_reg_model.pkl', 'rb') as model_dep:
-    reg_dep = pickle.load(model_dep)
-
-with open('models/gb_arr_model.pkl', 'rb') as model_arr:
-    reg_arr = pickle.load(model_arr)
+# with open('models/gb_reg_model.pkl', 'rb') as model_dep:
+#     reg_dep = pickle.load(model_dep)
+#
+# with open('models/gb_arr_model.pkl', 'rb') as model_arr:
+#     reg_arr = pickle.load(model_arr)
 
 # Streamlit interface to input data
 col1, col2 = st.columns(2)
