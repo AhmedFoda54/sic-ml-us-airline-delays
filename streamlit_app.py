@@ -6,23 +6,24 @@ import xgboost
 # Page config
 st.set_page_config(
     page_title="US Airline Flight Delays",
-#    page_icon="images/image.jpg",
+   page_icon="app_images/airplane-logo.jpg",
     # layout="wide",
 )
 
 # Page title
 st.title('US Airline Flight Delays')
-#st.image('images/image.jpg')
+st.image('app_images/airplane-bg.jpg')
 st.write("\n\n")
 
 st.markdown(
-    """
-    This app aims to assist in three things:
-    1- Predict if there is delay in the departure of the flight.
-    2- how many minutes there will be a delay in the departure?
-    3- How much time there will be as a delay in the arrival of flight?
-    """
-)
+    "This app aims to assist in three things:")
+st.markdown(
+    "1- Predict if there is delay in the departure of the flight.")
+st.markdown(
+    "2- how many minutes there will be a delay in the departure?")
+st.markdown(
+    "3- How much time there will be as a delay in the arrival of flight?")
+
 
 # Load our three models
 with open('models/xgb_class_model.pkl', 'rb') as model_clf:
